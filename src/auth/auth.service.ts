@@ -16,12 +16,7 @@ export class AuthService {
         signUpCredentialsDto,
         { headers: headersRequest },
       )
-      .subscribe({
-        complete: () => {
-          console.log('completed');
-        },
-        error: (err) => {},
-      });
+      .pipe(map((response) => response.data));
   }
 
   signIn(signInCredentialsDto: SignInCredentialsDto) {

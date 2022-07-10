@@ -11,4 +11,5 @@ export class GetOffersDto {
     userId: string;
     providerList: Array<string>;
     nbrOfPassenger: number;
+    token: string;
 }
